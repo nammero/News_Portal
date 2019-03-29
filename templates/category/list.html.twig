@@ -1,0 +1,7 @@
+<ul class="navbar-nav mr-auto">
+{% for category in categories %}
+    <li class="nav-item {{ active is same as(category.slug) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ path('category_show', {'slug': category.slug}) }}">{{ category.name }}</a>
+    </li>
+{% endfor %}
+</ul>

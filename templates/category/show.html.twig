@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}The best articles in {{ category.name }} | News Portal{% endblock %}
+
+{% block styles %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/category.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <section class="category">
+        <h1>{{ category.name }}</h1>
+        <p>{{ category.description }}</p>
+    </section>
+</div>
+{% endblock %}

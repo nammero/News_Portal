@@ -1,0 +1,8 @@
+# Home page
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+category_show:
+    path: /category/{slug}
+    controller: App\Controller\CategoryController::show
