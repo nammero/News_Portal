@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}The best articles in {{ category.name }} | News Portal{% endblock %}
+{% block title %}The best articles in {{ category.title }} | News Portal{% endblock %}
 
 {% block styles %}
     {{ parent() }}
@@ -8,10 +8,23 @@
 {% endblock %}
 
 {% block body %}
-<div class="container">
-    <section class="category">
-        <h1>{{ category.name }}</h1>
-        <p>{{ category.description }}</p>
-    </section>
-</div>
+    <div class="container">
+        <section class="category">
+            <h1>{{ category.title }}</h1>
+            <p>{{ category.description }}</p>
+        </section>
+
+        <section class="category">
+            <div class="row posts">
+                {% for post in posts %}
+                    <div class="col-12">
+                        <article class="post top-post">
+                            <div class="category-link">{{ post.description }}</div>
+                            <time>{{ post.date|date('Y-m-d') }}</time>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
 {% endblock %}
