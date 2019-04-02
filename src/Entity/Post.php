@@ -20,7 +20,7 @@ class Post
      * @ORM\Column(type="string", length=255)
      */
     private $description;
-//cascade={"persist"}
+    //cascade={"persist"}
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", cascade={"persist"})
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id", nullable=false)
