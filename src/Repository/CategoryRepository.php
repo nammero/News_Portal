@@ -29,4 +29,12 @@ class CategoryRepository extends ServiceEntityRepository implements CategoryRepo
             ->getOneOrNullResult()
         ;
     }
+//
+//    public function findCategoriesList(): array
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->select('c.title')
+//            ->getQuery()
+//            ->getArrayResult();
+//    }
 }

@@ -19,6 +19,8 @@ final class CategoryController extends AbstractController
 
     /**
      * @Route("/category/{slug}", name="category_show", requirements={"slug"="^[A-Za-z0-9-_]+$"})
+     * @param string $slug
+     * @return Response
      */
     public function show(string $slug): Response
     {
